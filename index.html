@@ -152,9 +152,9 @@
         </div>
         <div>
           <div class="flex flex-wrap items-center gap-1.5">
-            <span class="text-[10px] font-mono-tac uppercase tracking-widest px-2 py-0.5 rounded bg-amber-500/15 text-amber-400 border border-amber-500/30 font-semibold">ELEMENT HELIX 6-24x50 FFP</span>
+            <span id="headerScopeBadge" class="text-[10px] font-mono-tac uppercase tracking-widest px-2 py-0.5 rounded bg-amber-500/15 text-amber-400 border border-amber-500/30 font-semibold">ELEMENT HELIX 6-24x50 FFP</span>
             <span id="headerReticleBadge" class="text-[10px] font-mono-tac uppercase tracking-wider px-2 py-0.5 rounded bg-slate-800 text-slate-300 border border-slate-700">APR-2D MRAD</span>
-            <span class="text-[10px] font-mono-tac uppercase tracking-wider px-2 py-0.5 rounded bg-emerald-500/15 text-emerald-300 border border-emerald-500/30">PHOTOREALISTIC OPTICS</span>
+            <span class="text-[10px] font-mono-tac uppercase tracking-wider px-2 py-0.5 rounded bg-emerald-500/15 text-emerald-300 border border-emerald-500/30">TRUE 1:1 FFP SUBTENSIONS</span>
           </div>
           <h1 class="text-base sm:text-xl font-extrabold tracking-tight text-white mt-0.5">MRAD Elevation &amp; Wind Hold Trainer</h1>
         </div>
@@ -180,7 +180,7 @@
       </p>
     </div>
 
-    <!-- Shooter Selection Cards (Justin, Cobus, Wayne, Rhys) -->
+    <!-- Shooter Selection Cards (Justin, Cobus, Wayne, Rhys, Rich) -->
     <div class="mb-2 flex items-center justify-between shrink-0">
       <h2 class="text-xs font-mono-tac uppercase tracking-wider text-slate-400 font-bold">Select Shooter to Enter Scope View</h2>
       <span class="text-[11px] text-amber-400 font-mono-tac font-semibold">Tap shooter card &rarr;</span>
@@ -206,7 +206,7 @@
               </span>
             </div>
             <p id="driveLastSyncedSubtext" class="text-[10px] font-mono-tac text-slate-400 mt-0.5">
-              Auto-syncs across phones for Justin, Cobus, Wayne &amp; Rhys
+              Auto-syncs across phones for Justin, Cobus, Wayne, Rhys &amp; Rich
             </p>
           </div>
         </div>
@@ -254,21 +254,21 @@
       </div>
     </div>
 
-    <!-- Optic & Ballistic Drill Configuration -->
+    <!-- Optic, Reticle & User Movement Configuration -->
     <div class="mt-3.5 bg-slate-900/95 border border-slate-800 rounded-2xl p-3.5 sm:p-4 shrink-0 mb-2">
       <div class="flex items-center justify-between mb-2.5">
         <h3 class="text-xs font-mono-tac uppercase tracking-wider font-bold text-slate-200 flex items-center gap-2">
           <svg class="w-4 h-4 text-cyan-400" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
             <path stroke-linecap="round" stroke-linejoin="round" d="M12 6V4m0 2a2 2 0 100 4m0-4a2 2 0 110 4m-6 8a2 2 0 100-4m0 4a2 2 0 110-4m0 4v2m0-6V4m6 6v10m6-2a2 2 0 100-4m0 4a2 2 0 110-4m0 4v2m0-6V4" />
           </svg>
-          Element Helix 6-24x50 FFP Settings
+          <span id="settingsSectionTitle">Scope, Reticle &amp; User Control Settings</span>
         </h3>
-        <span class="text-[10px] font-mono-tac text-emerald-400 bg-emerald-500/10 border border-emerald-500/20 px-2 py-0.5 rounded">Photorealistic Etched Reticle</span>
+        <span class="text-[10px] font-mono-tac text-emerald-400 bg-emerald-500/10 border border-emerald-500/20 px-2 py-0.5 rounded">True 1:1 FFP MRAD Subtensions</span>
       </div>
 
       <div class="grid grid-cols-1 sm:grid-cols-3 gap-2.5 text-xs">
         <div>
-          <label class="block text-[10px] font-mono-tac uppercase text-slate-400 mb-1">AR500 Target Plate Size</label>
+          <label for="selectTolerance" class="block text-[10px] font-mono-tac uppercase text-slate-400 mb-1">AR500 Target Plate Size</label>
           <select id="selectTolerance" class="w-full bg-slate-950 border border-slate-700 rounded-xl px-2.5 py-2 text-slate-100 font-medium focus:outline-none focus:border-amber-500">
             <option value="0.20">Pro PRS Plate (±0.20 MRAD)</option>
             <option value="0.30" selected>Standard Steel (±0.30 MRAD)</option>
@@ -277,15 +277,16 @@
         </div>
 
         <div>
-          <label class="block text-[10px] font-mono-tac uppercase text-slate-400 mb-1">Helix FFP Glass Reticle</label>
+          <label for="selectReticleType" class="block text-[10px] font-mono-tac uppercase text-slate-400 mb-1">Scope &amp; FFP MRAD Reticle</label>
           <select id="selectReticleType" class="w-full bg-slate-950 border border-slate-700 rounded-xl px-2.5 py-2 text-slate-100 font-medium focus:outline-none focus:border-amber-500">
-            <option value="APR-2D" selected>APR-2D MRAD (Christmas Tree)</option>
-            <option value="APR-1C">APR-1C MRAD (Clean Crosshair)</option>
+            <option value="APR-2D" selected>Element Helix — APR-2D MRAD (Tree)</option>
+            <option value="APR-1C">Element Helix — APR-1C MRAD (Clean)</option>
+            <option value="EBR-7D">Vortex Razor — EBR-7D MRAD (Tree)</option>
           </select>
         </div>
 
         <div>
-          <label class="block text-[10px] font-mono-tac uppercase text-slate-400 mb-1">Default Starting Zoom</label>
+          <label for="selectDefaultZoom" class="block text-[10px] font-mono-tac uppercase text-slate-400 mb-1">Default Starting Zoom</label>
           <select id="selectDefaultZoom" class="w-full bg-slate-950 border border-slate-700 rounded-xl px-2.5 py-2 text-slate-100 font-medium focus:outline-none focus:border-amber-500">
             <option value="10">10x Magnification</option>
             <option value="14">14x Magnification</option>
@@ -293,6 +294,29 @@
             <option value="24">24x Magnification (Max Detail)</option>
           </select>
         </div>
+      </div>
+
+      <!-- Selectable User Movement Flip Toggles -->
+      <div class="grid grid-cols-1 sm:grid-cols-2 gap-2.5 mt-2.5 pt-2.5 border-t border-slate-800/80 text-xs">
+        <button id="btnToggleFlipVertical" type="button" aria-pressed="false" class="w-full bg-slate-950 hover:bg-slate-900 border border-slate-700 rounded-xl px-3 py-2 text-left flex items-center justify-between transition active:scale-[0.99]">
+          <div>
+            <div class="text-[10px] font-mono-tac uppercase text-slate-400">Vertical Movement Flip</div>
+            <div id="flipVerticalDesc" class="text-[11px] font-semibold text-slate-200 mt-0.5">Standard (Drag Down &rarr; Target Down)</div>
+          </div>
+          <span id="flipVerticalBadge" class="px-2.5 py-0.5 rounded-full text-[10px] font-mono-tac font-bold uppercase bg-slate-800 text-slate-400 border border-slate-700">
+            OFF
+          </span>
+        </button>
+
+        <button id="btnToggleFlipHorizontal" type="button" aria-pressed="false" class="w-full bg-slate-950 hover:bg-slate-900 border border-slate-700 rounded-xl px-3 py-2 text-left flex items-center justify-between transition active:scale-[0.99]">
+          <div>
+            <div class="text-[10px] font-mono-tac uppercase text-slate-400">Horizontal Movement Flip</div>
+            <div id="flipHorizontalDesc" class="text-[11px] font-semibold text-slate-200 mt-0.5">Standard (Drag Right &rarr; Target Right)</div>
+          </div>
+          <span id="flipHorizontalBadge" class="px-2.5 py-0.5 rounded-full text-[10px] font-mono-tac font-bold uppercase bg-slate-800 text-slate-400 border border-slate-700">
+            OFF
+          </span>
+        </button>
       </div>
     </div>
   </div>
@@ -320,6 +344,7 @@
           <option value="Cobus" class="bg-slate-900 text-white">COBUS</option>
           <option value="Wayne" class="bg-slate-900 text-white">WAYNE</option>
           <option value="Rhys" class="bg-slate-900 text-white">RHYS</option>
+          <option value="Rich" class="bg-slate-900 text-white">RICH</option>
         </select>
       </div>
 
@@ -534,7 +559,7 @@
       <div class="flex items-center justify-between pb-3 border-b border-slate-800">
         <div>
           <span class="text-[10px] font-mono-tac uppercase tracking-wider px-2 py-0.5 rounded bg-emerald-500/15 text-emerald-300 border border-emerald-500/30 font-bold">Google Drive Live Sync</span>
-          <h3 class="text-base sm:text-lg font-extrabold text-white mt-1">4-Player Phone Leaderboard Sync</h3>
+          <h3 class="text-base sm:text-lg font-extrabold text-white mt-1">5-Player Squad Leaderboard Sync</h3>
         </div>
         <button id="btnCloseDriveSyncModal" type="button" class="p-1.5 rounded-lg bg-slate-800 hover:bg-slate-700 text-slate-300">
           <svg class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5">
@@ -579,7 +604,7 @@
             View Google Apps Script Code (Pre-Configured for Your Drive Sheet)
           </summary>
           <pre id="appsScriptCodeBlock" class="mt-2 p-2.5 rounded-lg bg-black/70 border border-slate-800 text-[10px] font-mono-tac text-emerald-300 overflow-x-auto select-all whitespace-pre">const SPREADSHEET_ID = '15BPRT9ws5yL33EAOWb_5Jkom-YUReUAX5whURSXDoTs';
-const PLAYERS = ['Justin', 'Cobus', 'Wayne', 'Rhys'];
+const PLAYERS = ['Justin', 'Cobus', 'Wayne', 'Rhys', 'Rich'];
 
 function doGet() {
   const ss = SpreadsheetApp.openById(SPREADSHEET_ID);
@@ -661,7 +686,7 @@ function doPost(e) {
     <div class="w-full max-w-sm rounded-2xl bg-slate-900 border border-slate-700 p-5 shadow-2xl">
       <h3 class="text-base font-bold text-white">Reset Squad Scoreboard?</h3>
       <p class="text-xs text-slate-400 mt-1.5 leading-relaxed">
-        Clear all saved hit streaks, average times, and best response times for Justin, Cobus, Wayne, and Rhys (and push reset to Google Drive if connected)?
+        Clear all saved hit streaks, average times, and best response times for Justin, Cobus, Wayne, Rhys, and Rich (and push reset to Google Drive if connected)?
       </p>
       <div class="mt-4 flex items-center justify-end gap-2.5">
         <button id="btnCancelReset" type="button" class="px-3.5 py-2 rounded-xl bg-slate-800 hover:bg-slate-700 text-xs font-semibold text-slate-200">
@@ -715,12 +740,14 @@ function doPost(e) {
       const DRIVE_SCRIPT_URL_KEY = 'element_helix_drive_script_url_v1';
       const DEFAULT_DRIVE_SCRIPT_URL = 'https://script.google.com/macros/s/AKfycbz5QMmLJVuhxaGP4az_Kwk0yYBjgIpjNsQy9VMQe_YWvpzzEjd265OFZ5g9F4eWT6PPgg/exec';
       const GOOGLE_SHEET_ID = '15BPRT9ws5yL33EAOWb_5Jkom-YUReUAX5whURSXDoTs';
-      const PLAYERS = ['Justin', 'Cobus', 'Wayne', 'Rhys'];
+      const USER_SETTINGS_KEY = 'element_helix_user_settings_v1';
+      const PLAYERS = ['Justin', 'Cobus', 'Wayne', 'Rhys', 'Rich'];
       const PLAYER_STYLES = {
         Justin: { border: 'border-amber-500/40', dot: 'bg-amber-400' },
         Cobus:  { border: 'border-cyan-500/40', dot: 'bg-cyan-400' },
         Wayne:  { border: 'border-emerald-500/40', dot: 'bg-emerald-400' },
-        Rhys:   { border: 'border-purple-500/40', dot: 'bg-purple-400' }
+        Rhys:   { border: 'border-purple-500/40', dot: 'bg-purple-400' },
+        Rich:   { border: 'border-rose-500/40', dot: 'bg-rose-400' }
       };
 
       function createDefaultStats() {
@@ -1033,8 +1060,10 @@ function doPost(e) {
         screen: 'START',        // 'START' | 'TRAINING'
         drillPhase: 'CALL',     // 'CALL' | 'ENGAGING' | 'RESULT'
         toleranceMrad: 0.30,    // Target plate half-width / radius in MRAD
-        reticleType: 'APR-2D',  // 'APR-2D' | 'APR-1C'
+        reticleType: 'APR-2D',  // 'APR-2D' | 'APR-1C' | 'EBR-7D'
         zoom: 16.0,             // True FFP Zoom: 6.0x to 24.0x
+        flipVertical: false,    // User Setting: Invert vertical target/reticle movement
+        flipHorizontal: false,  // User Setting: Invert horizontal target/reticle movement
         illuminated: false,     // Etched Glass vs Fiber-Optic Red Illumination
         muted: false,
 
@@ -1157,9 +1186,104 @@ function doPost(e) {
       const leaderboardBody = document.getElementById('leaderboardBody');
       const headerReticleBadge = document.getElementById('headerReticleBadge');
 
+      const headerScopeBadge = document.getElementById('headerScopeBadge');
       const selectTolerance = document.getElementById('selectTolerance');
       const selectReticleType = document.getElementById('selectReticleType');
       const selectDefaultZoom = document.getElementById('selectDefaultZoom');
+      const btnToggleFlipVertical = document.getElementById('btnToggleFlipVertical');
+      const flipVerticalDesc = document.getElementById('flipVerticalDesc');
+      const flipVerticalBadge = document.getElementById('flipVerticalBadge');
+      const btnToggleFlipHorizontal = document.getElementById('btnToggleFlipHorizontal');
+      const flipHorizontalDesc = document.getElementById('flipHorizontalDesc');
+      const flipHorizontalBadge = document.getElementById('flipHorizontalBadge');
+
+      function updateScopeAndFlipSettingsUI() {
+        const rType = selectReticleType.value;
+        appState.reticleType = rType;
+        if (rType === 'EBR-7D') {
+          if (headerScopeBadge) {
+            headerScopeBadge.textContent = 'VORTEX RAZOR HD FFP';
+            headerScopeBadge.className = 'text-[10px] font-mono-tac uppercase tracking-widest px-2 py-0.5 rounded bg-amber-600/20 text-amber-300 border border-amber-500/40 font-semibold';
+          }
+          if (headerReticleBadge) headerReticleBadge.textContent = 'EBR-7D MRAD';
+        } else {
+          if (headerScopeBadge) {
+            headerScopeBadge.textContent = 'ELEMENT HELIX 6-24x50 FFP';
+            headerScopeBadge.className = 'text-[10px] font-mono-tac uppercase tracking-widest px-2 py-0.5 rounded bg-amber-500/15 text-amber-400 border border-amber-500/30 font-semibold';
+          }
+          if (headerReticleBadge) headerReticleBadge.textContent = `${rType} MRAD`;
+        }
+
+        if (btnToggleFlipVertical && flipVerticalDesc && flipVerticalBadge) {
+          btnToggleFlipVertical.setAttribute('aria-pressed', String(appState.flipVertical));
+          if (appState.flipVertical) {
+            btnToggleFlipVertical.className = 'w-full bg-amber-500/10 hover:bg-amber-500/15 border border-amber-500/50 rounded-xl px-3 py-2 text-left flex items-center justify-between transition active:scale-[0.99]';
+            flipVerticalDesc.textContent = 'Flipped (Drag Up → Target Down / Move Scope)';
+            flipVerticalDesc.className = 'text-[11px] font-semibold text-amber-300 mt-0.5';
+            flipVerticalBadge.textContent = 'FLIPPED';
+            flipVerticalBadge.className = 'px-2.5 py-0.5 rounded-full text-[10px] font-mono-tac font-bold uppercase bg-amber-500 text-slate-950';
+          } else {
+            btnToggleFlipVertical.className = 'w-full bg-slate-950 hover:bg-slate-900 border border-slate-700 rounded-xl px-3 py-2 text-left flex items-center justify-between transition active:scale-[0.99]';
+            flipVerticalDesc.textContent = 'Standard (Drag Down → Target Down)';
+            flipVerticalDesc.className = 'text-[11px] font-semibold text-slate-200 mt-0.5';
+            flipVerticalBadge.textContent = 'OFF';
+            flipVerticalBadge.className = 'px-2.5 py-0.5 rounded-full text-[10px] font-mono-tac font-bold uppercase bg-slate-800 text-slate-400 border border-slate-700';
+          }
+        }
+
+        if (btnToggleFlipHorizontal && flipHorizontalDesc && flipHorizontalBadge) {
+          btnToggleFlipHorizontal.setAttribute('aria-pressed', String(appState.flipHorizontal));
+          if (appState.flipHorizontal) {
+            btnToggleFlipHorizontal.className = 'w-full bg-cyan-500/10 hover:bg-cyan-500/15 border border-cyan-500/50 rounded-xl px-3 py-2 text-left flex items-center justify-between transition active:scale-[0.99]';
+            flipHorizontalDesc.textContent = 'Flipped (Drag Left → Target Right / Move Scope)';
+            flipHorizontalDesc.className = 'text-[11px] font-semibold text-cyan-300 mt-0.5';
+            flipHorizontalBadge.textContent = 'FLIPPED';
+            flipHorizontalBadge.className = 'px-2.5 py-0.5 rounded-full text-[10px] font-mono-tac font-bold uppercase bg-cyan-400 text-slate-950';
+          } else {
+            btnToggleFlipHorizontal.className = 'w-full bg-slate-950 hover:bg-slate-900 border border-slate-700 rounded-xl px-3 py-2 text-left flex items-center justify-between transition active:scale-[0.99]';
+            flipHorizontalDesc.textContent = 'Standard (Drag Right → Target Right)';
+            flipHorizontalDesc.className = 'text-[11px] font-semibold text-slate-200 mt-0.5';
+            flipHorizontalBadge.textContent = 'OFF';
+            flipHorizontalBadge.className = 'px-2.5 py-0.5 rounded-full text-[10px] font-mono-tac font-bold uppercase bg-slate-800 text-slate-400 border border-slate-700';
+          }
+        }
+      }
+
+      function saveUserSettings() {
+        try {
+          localStorage.setItem(USER_SETTINGS_KEY, JSON.stringify({
+            toleranceMrad: selectTolerance.value,
+            reticleType: selectReticleType.value,
+            defaultZoom: selectDefaultZoom.value,
+            flipVertical: appState.flipVertical,
+            flipHorizontal: appState.flipHorizontal
+          }));
+        } catch (e) {}
+      }
+
+      function loadUserSettings() {
+        try {
+          const raw = localStorage.getItem(USER_SETTINGS_KEY);
+          if (raw) {
+            const parsed = JSON.parse(raw);
+            if (parsed.toleranceMrad && ['0.20', '0.30', '0.42'].includes(String(parsed.toleranceMrad))) {
+              selectTolerance.value = String(parsed.toleranceMrad);
+              appState.toleranceMrad = parseFloat(parsed.toleranceMrad);
+            }
+            if (parsed.reticleType && ['APR-2D', 'APR-1C', 'EBR-7D'].includes(String(parsed.reticleType))) {
+              selectReticleType.value = String(parsed.reticleType);
+              appState.reticleType = String(parsed.reticleType);
+            }
+            if (parsed.defaultZoom && ['10', '14', '16', '24'].includes(String(parsed.defaultZoom))) {
+              selectDefaultZoom.value = String(parsed.defaultZoom);
+              appState.zoom = parseFloat(parsed.defaultZoom);
+            }
+            appState.flipVertical = Boolean(parsed.flipVertical);
+            appState.flipHorizontal = Boolean(parsed.flipHorizontal);
+          }
+        } catch (e) {}
+        updateScopeAndFlipSettingsUI();
+      }
 
       const hudPlayerSelect = document.getElementById('hudPlayerSelect');
       const hudStreak = document.getElementById('hudStreak');
@@ -1394,7 +1518,8 @@ function doPost(e) {
           callWindHint.textContent = `Wind R\u2192L (Target on ${wAbs} L)`;
         }
 
-        callDistanceInfo.textContent = `Target: ${distanceMeters}m Weathered AR500 Steel Plate`;
+        const scopeLabel = appState.reticleType === 'EBR-7D' ? 'Vortex Razor EBR-7D' : `Element Helix ${appState.reticleType}`;
+        callDistanceInfo.textContent = `Target: ${distanceMeters}m AR500 Plate • ${scopeLabel}`;
 
         liveTimerDisplay.textContent = '0.00s';
         callOverlay.classList.remove('hidden');
@@ -1604,12 +1729,13 @@ function doPost(e) {
 
       const reticleCacheCanvas = document.createElement('canvas');
       const reticleCacheCtx = reticleCacheCanvas.getContext('2d');
-      const RETICLE_MIN_X_MRAD = -7.5;
-      const RETICLE_MAX_X_MRAD = 7.5;
-      const RETICLE_MIN_Y_MRAD = -6.5;
-      const RETICLE_MAX_Y_MRAD = 10.5;
-      const RETICLE_SPAN_X_MRAD = RETICLE_MAX_X_MRAD - RETICLE_MIN_X_MRAD; // 15 MRAD
-      const RETICLE_SPAN_Y_MRAD = RETICLE_MAX_Y_MRAD - RETICLE_MIN_Y_MRAD; // 17 MRAD
+      // Full-bleed MRAD span (-14 to +14 X, -10 to +14 Y) so outer FFP stadia posts never truncate at 6x-24x zoom
+      const RETICLE_MIN_X_MRAD = -14.0;
+      const RETICLE_MAX_X_MRAD = 14.0;
+      const RETICLE_MIN_Y_MRAD = -10.0;
+      const RETICLE_MAX_Y_MRAD = 14.0;
+      const RETICLE_SPAN_X_MRAD = RETICLE_MAX_X_MRAD - RETICLE_MIN_X_MRAD; // 28 MRAD
+      const RETICLE_SPAN_Y_MRAD = RETICLE_MAX_Y_MRAD - RETICLE_MIN_Y_MRAD; // 24 MRAD
 
       let cachedPxPerMrad = 0;
       let cachedReticleType = '';
@@ -1633,7 +1759,8 @@ function doPost(e) {
         const scopeCenterY = viewHeight * 0.5;
         const scopeRadius = Math.min(viewWidth, viewHeight) * 0.465;
 
-        const pxPerMrad = ((scopeRadius * 2) / 15.0) * (appState.zoom / 16.0);
+        // Calibrated FFP optical scale: 16.0 MRAD spans the ocular diameter at 16x reference magnification
+        const pxPerMrad = ((scopeRadius * 2) / 16.0) * (appState.zoom / 16.0);
 
         return {
           scopeCenterX,
@@ -1657,10 +1784,41 @@ function doPost(e) {
         }
       }
 
+      /**
+       * Builds high-DPI offscreen FFP reticle cache for:
+       * 1) Element Helix 6-24x50 FFP — APR-2D MRAD (Christmas Tree, official Element Optics Reticle Sheet)
+       *    - A. Floating 0.045 MRAD Center Dot with true 0.20 MRAD open center gap on all 4 axes.
+       *    - B+C. True 1/10 MIL (0.1 MRAD) Ranging Scale between 5.0 and 6.0 MRAD on left, right, and upper vertical axes.
+       *    - D. Strictly 4 uniform 0.2 MRAD Hash Lines (.2, .4, .6, .8) per MRAD along horizontal and vertical axes
+       *         (no colliding 0.5 hash line between .4 and .6 on the 0.2 MRAD spine!).
+       *    - E. 1.0 MRAD Major Hash Lines at whole MRADs (1..8 horizontal, 1..6 upper vertical, 1..10 lower vertical).
+       *    - F. 0.2 MRAD Holdover Dots on whole-MRAD elevation rows (1..10) starting at 0.2 MRAD out to tree width (3.0/4.0/5.0 MRAD),
+       *         with bold 1.0 MRAD indicator dots at whole-MRAD windage columns (1, 2, 3, 4, 5).
+       *    - G. 0.5 MRAD Holdover Dots on half-MRAD elevation rows (0.5, 1.5 .. 9.5) at every 0.5 MRAD interval (0.5, 1.0, 1.5, 2.0...).
+       *    - H. Etched Holdover Numerals (2, 4, 6 on horizontal & upper vertical; 2, 4, 6, 8, 10 flanking outer tree).
+       *    - I. Floating 0.5 MRAD Pointer Triangles (▼) above the horizontal stadia at 0.5, 1.5, 2.5, 3.5, 4.5 MRAD.
+       *
+       * 2) Element Helix 6-24x50 FFP — APR-1C MRAD (Clean Crosshair, official Element Optics Reticle Sheet)
+       *    - Floating 0.045 MRAD Center Dot with 0.20 MRAD open center gap.
+       *    - Uniform 0.2 MRAD graduations, 1/10 MIL (0.1 MRAD) scale between 5.0 and 6.0 MRAD, 0.5 MRAD markers, and 1.0 MRAD major hashes.
+       *
+       * 3) Vortex Razor HD Gen III — EBR-7D MRAD (Official Vortex M-00313-0 Reticle Manual)
+       *    - Floating 0.03 MRAD pinpoint Center Dot with 0.20 MRAD open center gap.
+       *    - Asymmetric Horizontal Stadia (0.2 to 6.0 MRAD):
+       *        • TOP side of horizontal axis: 0.2 MRAD hash marks (.2, .4, .6, .8) extending UPWARD only.
+       *        • BOTTOM side of horizontal axis: 0.5 MRAD hash marks (0.5, 1.5, 2.5, 3.5, 4.5, 5.5) extending DOWNWARD only.
+       *        • Whole MRAD marks (1..10): cross both above & below axis, with even numerals 2, 4, 6, 8 (no '1').
+       *    - Outer Horizontal Stadia (6.0 to 10.0 MRAD): alternating 0.1 MRAD ranging graduations (odd .1/.3/.5/.7/.9 below, even .2/.4/.6/.8 above).
+       *    - Vertical Stadia: 0.2 MRAD horizontal cross-hashes (.2, .4, .6, .8) and 1.0 MRAD major cross-hashes (1..10) down the spine.
+       *    - EBR-7D Windage Tree: 0.2 MRAD holdover dots on whole-MRAD rows (1..10), 0.5 MRAD holdover dots on half-MRAD rows (0.5..9.5),
+       *      and flanking even numerals 2, 4, 6, 8, 10.
+       *    - EBR-7D Cross-Plex Illumination: when ILLUM is active, only the center dot and main horizontal/vertical stadia (-6 to +6 MRAD)
+       *      illuminate in red while the windage tree and outer 6-10 MRAD stadia remain crisp black etched glass.
+       */
       function rebuildReticleCache() {
         const metrics = getScopeMetrics();
         const idealScale = metrics.pxPerMrad * dpr;
-        const maxAllowedScale = 2600 / RETICLE_SPAN_Y_MRAD;
+        const maxAllowedScale = 2800 / RETICLE_SPAN_X_MRAD;
         const scale = Math.min(idealScale, maxAllowedScale);
 
         const w = Math.ceil(RETICLE_SPAN_X_MRAD * scale);
@@ -1679,32 +1837,47 @@ function doPost(e) {
         const ox = -RETICLE_MIN_X_MRAD * scale;
         const oy = -RETICLE_MIN_Y_MRAD * scale;
 
+        const rType = appState.reticleType;
         const isIllum = appState.illuminated;
-        const mainColor = isIllum ? '#ff2424' : '#080b0f';
-        const bevelHighlight = isIllum ? 'rgba(254, 202, 202, 0.55)' : 'rgba(255, 255, 255, 0.34)';
+        const etchedBlack = '#080b0f';
+        const illumRed = '#ff2424';
+        const mainColor = isIllum ? illumRed : etchedBlack;
+        const bevelHighlight = isIllum ? 'rgba(254, 202, 202, 0.52)' : 'rgba(255, 255, 255, 0.34)';
 
         c.lineCap = 'butt';
 
-        const gapPx = 0.15 * scale;
-        const h02 = 0.095 * scale;
-        const h05 = 0.155 * scale;
-        const h10 = 0.25 * scale;
+        if (rType === 'EBR-7D') {
+          renderVortexEbr7dReticle(c, ox, oy, w, h, scale, isIllum, mainColor, etchedBlack, bevelHighlight);
+        } else {
+          renderElementHelixReticle(c, ox, oy, w, h, scale, rType, isIllum, mainColor, etchedBlack, bevelHighlight);
+        }
+      }
 
-        // 1. Photorealistic Heavy Outer FFP German-Style Stadia Posts (> 6.5 MRAD)
-        const postStartPx = 6.5 * scale;
-        const postThick = Math.max(4.5, 0.14 * scale);
-        c.strokeStyle = '#07090d';
+      function renderElementHelixReticle(c, ox, oy, w, h, scale, rType, isIllum, mainColor, etchedBlack, bevelHighlight) {
+        // Official Element Helix APR-2D / APR-1C FFP MRAD Subtensions:
+        // Open center gap = 0.20 MRAD (so main stadia start cleanly at the first 0.2 MRAD tick)
+        const gapPx = 0.20 * scale;
+        const h01 = 0.065 * scale; // 1/10 MIL (0.1 MRAD) ranging scale ticks (between 5.0 and 6.0 MRAD)
+        const h02 = 0.095 * scale; // 0.2 MRAD hash lines (4 ticks per MRAD = 5 uniform 0.2 MRAD spaces)
+        const h05 = 0.165 * scale; // 0.5 MRAD markers
+        const h10 = 0.255 * scale; // 1.0 MRAD major hash lines
+
+        // 1. Heavy Tapered FFP Outer Stadia Bars (Start at 8.0 MRAD Left/Right and 10.5 MRAD Bottom)
+        const postStartX = 8.0 * scale;
+        const postStartY = 10.5 * scale;
+        const postThick = Math.max(4.2, 0.135 * scale);
+        c.strokeStyle = etchedBlack;
         c.lineWidth = postThick;
         c.beginPath();
         c.moveTo(0, oy);
-        c.lineTo(ox - postStartPx, oy);
-        c.moveTo(ox + postStartPx, oy);
+        c.lineTo(ox - postStartX, oy);
+        c.moveTo(ox + postStartX, oy);
         c.lineTo(w, oy);
-        c.moveTo(ox, oy + 9.2 * scale);
+        c.moveTo(ox, oy + postStartY);
         c.lineTo(ox, h);
         c.stroke();
 
-        // 2. Photorealistic Laser-Etched Glass Refraction Bevel / Fiber-Optic Bloom Layer
+        // 2. Laser-Etched Glass Refraction Bevel / Red Fiber-Optic Illumination Layer
         c.save();
         if (isIllum) {
           c.shadowColor = 'rgba(239, 68, 68, 0.92)';
@@ -1716,36 +1889,39 @@ function doPost(e) {
           c.shadowOffsetY = 0.8;
         }
 
-        // Glass bevel micro-highlight behind main crosshairs
+        // Subtle glass bevel highlight
         c.strokeStyle = bevelHighlight;
-        c.lineWidth = Math.max(1.9, scale * 0.034);
+        c.lineWidth = Math.max(1.8, scale * 0.032);
         c.beginPath();
-        c.moveTo(0, oy - 0.5);
+        c.moveTo(ox - postStartX, oy - 0.5);
         c.lineTo(ox - gapPx, oy - 0.5);
         c.moveTo(ox + gapPx, oy - 0.5);
-        c.lineTo(w, oy - 0.5);
+        c.lineTo(ox + postStartX, oy - 0.5);
         c.moveTo(ox - 0.5, oy - 6.0 * scale);
         c.lineTo(ox - 0.5, oy - gapPx);
         c.moveTo(ox - 0.5, oy + gapPx);
-        c.lineTo(ox - 0.5, h);
+        c.lineTo(ox - 0.5, oy + postStartY);
         c.stroke();
 
-        // 3. Main Etched Crosshair Lines
+        // 3. Main Etched Crosshair Lines (0.033 MRAD line thickness)
         c.strokeStyle = mainColor;
         c.fillStyle = mainColor;
-        c.lineWidth = Math.max(1.2, scale * 0.023);
+        c.lineWidth = Math.max(1.18, scale * 0.024);
 
         c.beginPath();
-        c.moveTo(0, oy);
+        // Left & Right Horizontal Stadia (0.20 to 8.0 MRAD)
+        c.moveTo(ox - postStartX, oy);
         c.lineTo(ox - gapPx, oy);
         c.moveTo(ox + gapPx, oy);
-        c.lineTo(w, oy);
+        c.lineTo(ox + postStartX, oy);
 
+        // Upper Vertical Stadia (0.20 to 6.0 MRAD)
         c.moveTo(ox, oy - 6.0 * scale);
         c.lineTo(ox, oy - gapPx);
 
-        if (appState.reticleType === 'APR-2D') {
-          const nodeGap = 0.055 * scale;
+        // Lower Vertical Stadia (0.20 to 10.5 MRAD)
+        if (rType === 'APR-2D') {
+          const nodeGap = 0.05 * scale;
           let currY = oy + gapPx;
           for (let eNum = 1; eNum <= 10; eNum++) {
             const targetY = oy + eNum * scale;
@@ -1754,73 +1930,93 @@ function doPost(e) {
             currY = targetY + nodeGap;
           }
           c.moveTo(ox, currY);
-          c.lineTo(ox, h);
+          c.lineTo(ox, oy + postStartY);
         } else {
           c.moveTo(ox, oy + gapPx);
-          c.lineTo(ox, h);
+          c.lineTo(ox, oy + postStartY);
         }
         c.stroke();
 
-        // 4. Center Floating Pinpoint Dot (0.0, 0.0)
-        const centerDotR = Math.max(1.6, 0.033 * scale);
+        // 4. A: Center Floating Pinpoint Dot (0.045 MRAD diameter -> 0.0225 MRAD radius)
+        const centerDotR = Math.max(1.5, 0.024 * scale);
         c.beginPath();
         c.arc(ox, oy, centerDotR, 0, Math.PI * 2);
         c.fill();
 
-        // 5. Horizontal Stadia Subtensions
-        c.lineWidth = Math.max(1.08, scale * 0.0195);
+        // 5. Horizontal Stadia Subtensions:
+        //    - D: 0.2 MRAD Hash Lines at .2, .4, .6, .8 (4 intermediate ticks = 5 uniform 0.2 MRAD spaces per MIL!)
+        //    - E: 1.0 MRAD Hash Lines at 1, 2, 3, 4, 5, 6, 7, 8 MRAD
+        //    - B: 1/10 MIL (0.1 MRAD) Scale between 5.0 and 6.0 MRAD (5.1, 5.2, 5.3, 5.4, 5.5, 5.6, 5.7, 5.8, 5.9)
+        c.lineWidth = Math.max(1.05, scale * 0.020);
         c.beginPath();
 
-        for (let step = 1; step <= 38; step++) {
-          const m = Number((step * 0.2).toFixed(1));
-          const dx = m * scale;
-          const isWhole = (step % 5 === 0);
+        // Whole MRAD cross-hashes (1.0 to 8.0 MRAD)
+        for (let wholeM = 1; wholeM <= 8; wholeM++) {
+          const dx = wholeM * scale;
+          c.moveTo(ox - dx, oy - h10);
+          c.lineTo(ox - dx, oy + h10);
+          c.moveTo(ox + dx, oy - h10);
+          c.lineTo(ox + dx, oy + h10);
+        }
 
-          if (isWhole) {
-            c.moveTo(ox - dx, oy - h10);
-            c.lineTo(ox - dx, oy + h10);
-            c.moveTo(ox + dx, oy - h10);
-            c.lineTo(ox + dx, oy + h10);
-          } else if (m < 5.0) {
+        // D: 0.2 MRAD Hash Lines from 0.2 to 4.8 MRAD (strictly .2, .4, .6, .8 — NO colliding .5 tick on bottom!)
+        for (let mil = 0; mil < 5; mil++) {
+          for (let sub = 1; sub <= 4; sub++) {
+            const m = mil + sub * 0.2;
+            const dx = m * scale;
+            if (rType === 'APR-2D') {
+              // On APR-2D, 0.2 MRAD ticks extend downward below the horizontal line
+              c.moveTo(ox - dx, oy);
+              c.lineTo(ox - dx, oy + h02);
+              c.moveTo(ox + dx, oy);
+              c.lineTo(ox + dx, oy + h02);
+            } else {
+              // On APR-1C clean crosshair, symmetric 0.2 MRAD cross-hashes
+              c.moveTo(ox - dx, oy - h02);
+              c.lineTo(ox - dx, oy + h02);
+              c.moveTo(ox + dx, oy - h02);
+              c.lineTo(ox + dx, oy + h02);
+            }
+          }
+        }
+
+        // B: Official 1/10 MIL (0.1 MRAD) Ranging Scale between 5.0 and 6.0 MRAD (all 9 tenths: 5.1 .. 5.9)
+        for (let tenth = 1; tenth <= 9; tenth++) {
+          const m = 5.0 + tenth * 0.1;
+          const dx = m * scale;
+          const isHalf = (tenth === 5);
+          const topExt = isHalf ? h05 : h01;
+          const botExt = isHalf ? h02 * 1.15 : h01;
+          c.moveTo(ox - dx, oy - topExt);
+          c.lineTo(ox - dx, oy + botExt);
+          c.moveTo(ox + dx, oy - topExt);
+          c.lineTo(ox + dx, oy + botExt);
+        }
+
+        // Outer 0.2 MRAD hashes between 6.0 and 8.0 MRAD + 6.5 / 7.5 half-MRAD markers
+        for (let mil = 6; mil < 8; mil++) {
+          for (let sub = 1; sub <= 4; sub++) {
+            const m = mil + sub * 0.2;
+            const dx = m * scale;
             c.moveTo(ox - dx, oy);
             c.lineTo(ox - dx, oy + h02);
             c.moveTo(ox + dx, oy);
             c.lineTo(ox + dx, oy + h02);
-          } else if (m > 5.0 && m < 6.0) {
-            c.moveTo(ox - dx, oy - h02);
-            c.lineTo(ox - dx, oy + h02);
-            c.moveTo(ox + dx, oy - h02);
-            c.lineTo(ox + dx, oy + h02);
           }
         }
-
-        const dx55 = 5.5 * scale;
-        c.moveTo(ox - dx55, oy - h05 * 1.15);
-        c.lineTo(ox - dx55, oy + h02);
-        c.moveTo(ox + dx55, oy - h05 * 1.15);
-        c.lineTo(ox + dx55, oy + h02);
-
-        for (let halfM = 0.5; halfM <= 4.5; halfM += 1.0) {
-          const dx = halfM * scale;
-          c.moveTo(ox - dx, oy);
-          c.lineTo(ox - dx, oy + h02 * 1.25);
-          c.moveTo(ox + dx, oy);
-          c.lineTo(ox + dx, oy + h02 * 1.25);
-        }
-
         [6.5, 7.5].forEach(halfOuter => {
           const dx = halfOuter * scale;
           c.moveTo(ox - dx, oy - h05);
-          c.lineTo(ox - dx, oy + h05);
+          c.lineTo(ox - dx, oy);
           c.moveTo(ox + dx, oy - h05);
-          c.lineTo(ox + dx, oy + h05);
+          c.lineTo(ox + dx, oy);
         });
         c.stroke();
 
-        // Inverted Triangles (▼) floating above 0.5, 1.5, 2.5, 3.5, 4.5 MRAD
-        const triW = Math.max(2.0, 0.055 * scale);
-        const triH = Math.max(2.3, 0.072 * scale);
-        const triTipY = oy - 0.045 * scale;
+        // I: Official 0.5 Mil Markers (floating inverted triangles ▼ above horizontal axis at 0.5, 1.5, 2.5, 3.5, 4.5 MRAD)
+        const triW = Math.max(1.9, 0.052 * scale);
+        const triH = Math.max(2.2, 0.068 * scale);
+        const triTipY = oy - 0.042 * scale;
         for (let halfM = 0.5; halfM <= 4.5; halfM += 1.0) {
           const dx = halfM * scale;
           [-dx, dx].forEach(offsetX => {
@@ -1833,31 +2029,43 @@ function doPost(e) {
           });
         }
 
-        // 6. Upper Vertical Stadia Subtensions (0.0 to 6.0 MRAD)
+        // 6. Upper Vertical Stadia Subtensions (0.2 to 6.0 MRAD UP):
+        //    - Complete 0.2 MRAD hashes from 0.2 to 4.8 MRAD (extending right)
+        //    - 0.5 MRAD markers at 0.5, 1.5, 2.5, 3.5, 4.5 MRAD (extending left so they never collide with 0.2 hashes!)
+        //    - C: Official 1/10 MIL (0.1 MRAD) Ranging Scale between 5.0 and 6.0 MRAD (all 9 tenths: 5.1 .. 5.9)
         c.beginPath();
         for (let eNum = 1; eNum <= 6; eNum++) {
           const dy = eNum * scale;
           c.moveTo(ox - h10, oy - dy);
           c.lineTo(ox + h10, oy - dy);
         }
-        for (let halfM = 0.5; halfM <= 5.5; halfM += 1.0) {
-          const dy = halfM * scale;
-          c.moveTo(ox - h05, oy - dy);
-          c.lineTo(ox + h05, oy - dy);
+        for (let mil = 0; mil < 5; mil++) {
+          for (let sub = 1; sub <= 4; sub++) {
+            const m = mil + sub * 0.2;
+            const dy = m * scale;
+            c.moveTo(ox, oy - dy);
+            c.lineTo(ox + h02, oy - dy);
+          }
+          const halfM = mil + 0.5;
+          const dyHalf = halfM * scale;
+          c.moveTo(ox - h05 * 0.85, oy - dyHalf);
+          c.lineTo(ox, oy - dyHalf);
         }
-        for (let s = 1; s <= 4; s++) {
-          const dy = s * 0.2 * scale;
-          c.moveTo(ox, oy - dy);
-          c.lineTo(ox + h02 * 1.1, oy - dy);
-        }
-        for (let s = 26; s <= 29; s++) {
-          const dy = s * 0.2 * scale;
-          c.moveTo(ox - h02, oy - dy);
-          c.lineTo(ox + h02 * 1.15, oy - dy);
+        // C: 1/10 MIL (0.1 MRAD) Vertical Scale between 5.0 and 6.0 MRAD UP
+        for (let tenth = 1; tenth <= 9; tenth++) {
+          const m = 5.0 + tenth * 0.1;
+          const dy = m * scale;
+          const isHalf = (tenth === 5);
+          const leftExt = isHalf ? h05 : h01;
+          const rightExt = isHalf ? h05 : h01;
+          c.moveTo(ox - leftExt, oy - dy);
+          c.lineTo(ox + rightExt, oy - dy);
         }
         c.stroke();
 
-        // 7. Lower Vertical Spine Subtensions (0.2 to 10.0 MRAD)
+        // 7. Lower Vertical Spine Subtensions (0.2 to 10.0 MRAD DOWN):
+        //    - Strictly 4 intermediate 0.2 MRAD hash lines (.2, .4, .6, .8) between whole MRADs!
+        //    - No extra 0.5 hash line on the APR-2D spine (0.5 MRAD is marked by the flanking 0.5 MRAD holdover dots)
         c.beginPath();
         for (let step = 1; step <= 50; step++) {
           const m = Number((step * 0.2).toFixed(1));
@@ -1865,8 +2073,8 @@ function doPost(e) {
           const isWhole = (step % 5 === 0);
 
           if (isWhole) {
-            if (appState.reticleType === 'APR-2D') {
-              const cGap = 0.055 * scale;
+            if (rType === 'APR-2D') {
+              const cGap = 0.05 * scale;
               c.moveTo(ox - h05 * 1.15, oy + dy);
               c.lineTo(ox - cGap, oy + dy);
               c.moveTo(ox + cGap, oy + dy);
@@ -1880,15 +2088,18 @@ function doPost(e) {
             c.lineTo(ox + h02, oy + dy);
           }
         }
-        for (let halfE = 0.5; halfE <= 9.5; halfE += 1.0) {
-          const dy = halfE * scale;
-          c.moveTo(ox - h05 * 0.9, oy + dy);
-          c.lineTo(ox + h05 * 0.9, oy + dy);
+        if (rType === 'APR-1C') {
+          // On APR-1C clean crosshair (no Christmas tree), mark 0.5 MRAD with small left-side pointer ticks
+          for (let halfE = 0.5; halfE <= 9.5; halfE += 1.0) {
+            const dy = halfE * scale;
+            c.moveTo(ox - h05, oy + dy);
+            c.lineTo(ox - h02 * 1.1, oy + dy);
+          }
         }
         c.stroke();
 
-        // 8. Etched Numerals
-        const fontPx = Math.max(10, Math.round(0.27 * scale));
+        // 8. H: Etched Holdover Numerals
+        const fontPx = Math.max(10, Math.round(0.26 * scale));
         c.font = `700 ${fontPx}px "Rajdhani", "Inter", sans-serif`;
         c.textAlign = 'center';
         c.textBaseline = 'middle';
@@ -1902,26 +2113,28 @@ function doPost(e) {
 
         [2, 4, 6].forEach(num => {
           const dy = num * scale;
-          c.fillText(String(num), ox - h10 - fontPx * 0.55, oy - dy);
+          c.fillText(String(num), ox - h10 - fontPx * 0.58, oy - dy);
         });
 
-        // 9. APR-2D Christmas Tree Holdover Matrix
-        if (appState.reticleType === 'APR-2D') {
-          const dotFineR = Math.max(1.15, 0.023 * scale);
-          const dotMajorR = Math.max(1.85, 0.039 * scale);
+        // 9. F & G: APR-2D Christmas Tree Holdover Matrix
+        if (rType === 'APR-2D') {
+          const dotFineR = Math.max(1.15, 0.022 * scale);
+          const dotHalfR = Math.max(1.35, 0.026 * scale);
+          const dotMajorR = Math.max(1.85, 0.038 * scale);
 
-          function getTreeMaxWidth(elevMrad) {
+          function getApr2dTreeMaxWidth(elevMrad) {
             if (elevMrad <= 4.0) return 3.0;
             if (elevMrad <= 6.0) return 4.0;
             return 5.0;
           }
 
+          // F: 0.2 MIL Holdover Dots on whole-MRAD rows (1..10) starting at 0.2 MRAD (wStep = 1..steps)
           for (let eNum = 1; eNum <= 10; eNum++) {
             const y = oy + eNum * scale;
-            const maxW = getTreeMaxWidth(eNum);
+            const maxW = getApr2dTreeMaxWidth(eNum);
             const steps = Math.round(maxW / 0.2);
 
-            for (let wStep = 2; wStep <= steps; wStep++) {
+            for (let wStep = 1; wStep <= steps; wStep++) {
               const windM = Number((wStep * 0.2).toFixed(1));
               const dx = windM * scale;
               const isWholeWind = (wStep % 5 === 0);
@@ -1934,32 +2147,303 @@ function doPost(e) {
             }
           }
 
+          // G: 0.5 MIL Holdover Dots on half-MRAD rows (0.5, 1.5, ..., 9.5) at every 0.5 MRAD interval (0.5, 1.0, 1.5, 2.0...)
           for (let halfE = 0.5; halfE <= 9.5; halfE += 1.0) {
             const y = oy + halfE * scale;
             const maxHalfW = halfE < 4.0 ? 2.5 : (halfE < 6.0 ? 3.5 : 4.5);
 
-            for (let wM = 0.5; wM <= maxHalfW; wM += 1.0) {
+            for (let wM = 0.5; wM <= maxHalfW + 0.01; wM = Number((wM + 0.5).toFixed(1))) {
               const dx = wM * scale;
+              const isWholeCol = Math.abs(wM - Math.round(wM)) < 0.01;
+              const r = isWholeCol ? dotHalfR * 1.1 : dotHalfR;
               c.beginPath();
-              c.arc(ox - dx, y, dotFineR * 1.05, 0, Math.PI * 2);
-              c.arc(ox + dx, y, dotFineR * 1.05, 0, Math.PI * 2);
+              c.arc(ox - dx, y, r, 0, Math.PI * 2);
+              c.arc(ox + dx, y, r, 0, Math.PI * 2);
               c.fill();
             }
           }
 
-          [2, 4, 6, 8].forEach(eNum => {
+          // H: Flanking Holdover Indication # (2, 4, 6, 8, 10)
+          [2, 4, 6, 8, 10].forEach(eNum => {
             const y = oy + eNum * scale;
-            const maxW = getTreeMaxWidth(eNum);
-            const labelDx = (maxW + 0.36) * scale;
+            const maxW = getApr2dTreeMaxWidth(eNum);
+            const labelDx = (maxW + 0.38) * scale;
             c.fillText(String(eNum), ox - labelDx, y);
             c.fillText(String(eNum), ox + labelDx, y);
           });
         } else {
-          [2, 4, 6, 8].forEach(eNum => {
+          // APR-1C Clean Crosshair Elevation Numerals
+          [2, 4, 6, 8, 10].forEach(eNum => {
             const y = oy + eNum * scale;
-            c.fillText(String(eNum), ox - h10 - fontPx * 0.6, y);
+            c.fillText(String(eNum), ox - h10 - fontPx * 0.65, y);
           });
         }
+
+        c.restore();
+      }
+
+      function renderVortexEbr7dReticle(c, ox, oy, w, h, scale, isIllum, mainColor, etchedBlack, bevelHighlight) {
+        // Official Vortex Razor HD Gen III EBR-7D (MRAD) Subtensions (Manual M-00313-0):
+        // - Center dot: 0.03 MRAD diameter
+        // - Crosshair line thickness: 0.03 MRAD, starting at 0.20 MRAD from center
+        // - Horizontal stadia (0.2 to 6.0 MRAD):
+        //     • TOP of horizontal stadia: 0.2 MRAD hashes (.2, .4, .6, .8) extending UPWARD
+        //     • BOTTOM of horizontal stadia: 0.5 MRAD hashes (.5, 1.5, 2.5, 3.5, 4.5, 5.5) extending DOWNWARD
+        //     • Whole MRADs (1..10): full cross-hashes, even numerals 2, 4, 6, 8 above axis (no '1')
+        // - Outer horizontal ranging section (6.0 to 10.0 MRAD): alternating 0.1 MRAD ticks (.1 below, .2 above, .3 below...)
+        // - Vertical stadia: 0.2 MRAD cross-hashes (.2, .4, .6, .8) and 1.0 MRAD major cross-hashes (1..10)
+        // - EBR-7D Illumination: only the center cross-plex (-6 to +6 MRAD horizontal & vertical stadia) illuminates in red;
+        //   windage tree dots and 6-10 MRAD outer stadia remain non-illuminated black etched glass.
+        const gapPx = 0.20 * scale;
+        const h01 = 0.062 * scale; // 0.125 MRAD total / alternating 0.1 MRAD outer ticks
+        const h02 = 0.075 * scale; // 0.15 MRAD fine 0.2 MRAD hash length
+        const h05 = 0.135 * scale; // 0.5 MRAD bottom windage hash length
+        const h10 = 0.20 * scale;  // 0.40 MRAD total (0.20 half-length) major 1.0 MRAD hash
+
+        // 1. Heavy Outer FFP Posts (> 10.1 MRAD Left/Right/Bottom)
+        const postStartX = 10.1 * scale;
+        const postStartY = 10.5 * scale;
+        const postThick = Math.max(4.2, 0.15 * scale);
+        c.strokeStyle = etchedBlack;
+        c.lineWidth = postThick;
+        c.beginPath();
+        c.moveTo(0, oy);
+        c.lineTo(ox - postStartX, oy);
+        c.moveTo(ox + postStartX, oy);
+        c.lineTo(w, oy);
+        c.moveTo(ox, oy + postStartY);
+        c.lineTo(ox, h);
+        c.stroke();
+
+        // 2. Non-Illuminated Etched Sections of EBR-7D (6.0-10.0 MRAD Outer Ranging Stadia + Windage Tree + Numerals)
+        c.save();
+        c.shadowColor = 'rgba(0, 0, 0, 0.38)';
+        c.shadowBlur = Math.max(1.2, scale * 0.02);
+        c.strokeStyle = etchedBlack;
+        c.fillStyle = etchedBlack;
+        c.lineWidth = Math.max(1.12, scale * 0.022);
+
+        // Outer 6.0 to 10.1 MRAD Horizontal Stadia & Alternating 0.1 MRAD Ranging Ticks
+        c.beginPath();
+        c.moveTo(ox - postStartX, oy);
+        c.lineTo(ox - 6.0 * scale, oy);
+        c.moveTo(ox + 6.0 * scale, oy);
+        c.lineTo(ox + postStartX, oy);
+
+        for (let mil = 6; mil < 10; mil++) {
+          for (let tenth = 1; tenth <= 10; tenth++) {
+            const m = Number((mil + tenth * 0.1).toFixed(1));
+            const dx = m * scale;
+            if (tenth === 10) {
+              c.moveTo(ox - dx, oy - h10);
+              c.lineTo(ox - dx, oy + h10);
+              c.moveTo(ox + dx, oy - h10);
+              c.lineTo(ox + dx, oy + h10);
+            } else if (tenth === 5) {
+              c.moveTo(ox - dx, oy);
+              c.lineTo(ox - dx, oy + h05);
+              c.moveTo(ox + dx, oy);
+              c.lineTo(ox + dx, oy + h05);
+            } else if (tenth % 2 === 1) {
+              // Odd tenths (.1, .3, .7, .9) on bottom of stadia
+              c.moveTo(ox - dx, oy);
+              c.lineTo(ox - dx, oy + h01);
+              c.moveTo(ox + dx, oy);
+              c.lineTo(ox + dx, oy + h01);
+            } else {
+              // Even tenths (.2, .4, .6, .8) on top of stadia
+              c.moveTo(ox - dx, oy - h01);
+              c.lineTo(ox - dx, oy);
+              c.moveTo(ox + dx, oy - h01);
+              c.lineTo(ox + dx, oy);
+            }
+          }
+        }
+        c.stroke();
+
+        // EBR-7D Windage Tree (Lower Two Quadrants — always non-illuminated black etched glass per Vortex EBR-7D spec)
+        const dotFineR = Math.max(1.12, 0.020 * scale);
+        const dotHalfR = Math.max(1.30, 0.024 * scale);
+        const dotMajorR = Math.max(1.75, 0.034 * scale);
+
+        function getEbr7dTreeMaxWidth(elevMrad) {
+          if (elevMrad <= 2.0) return 2.5;
+          if (elevMrad <= 4.0) return 3.0;
+          if (elevMrad <= 6.0) return 3.5;
+          if (elevMrad <= 8.0) return 4.0;
+          return 4.5;
+        }
+
+        // Whole-MRAD elevation rows (1..10): 0.2 MRAD holdover dots (0.2, 0.4, 0.6, 0.8, 1.0...)
+        for (let eNum = 1; eNum <= 10; eNum++) {
+          const y = oy + eNum * scale;
+          const maxW = getEbr7dTreeMaxWidth(eNum);
+          const steps = Math.round(maxW / 0.2);
+
+          for (let wStep = 1; wStep <= steps; wStep++) {
+            const windM = Number((wStep * 0.2).toFixed(1));
+            const dx = windM * scale;
+            const isWholeWind = (wStep % 5 === 0);
+            const r = isWholeWind ? dotMajorR : dotFineR;
+
+            c.beginPath();
+            c.arc(ox - dx, y, r, 0, Math.PI * 2);
+            c.arc(ox + dx, y, r, 0, Math.PI * 2);
+            c.fill();
+          }
+        }
+
+        // Half-MRAD elevation rows (0.5, 1.5 .. 9.5): 0.5 MRAD holdover dots (0.5, 1.0, 1.5, 2.0...)
+        for (let halfE = 0.5; halfE <= 9.5; halfE += 1.0) {
+          const y = oy + halfE * scale;
+          const maxW = getEbr7dTreeMaxWidth(Math.ceil(halfE));
+          for (let wM = 0.5; wM <= maxW + 0.01; wM = Number((wM + 0.5).toFixed(1))) {
+            const dx = wM * scale;
+            c.beginPath();
+            c.arc(ox - dx, y, dotHalfR, 0, Math.PI * 2);
+            c.arc(ox + dx, y, dotHalfR, 0, Math.PI * 2);
+            c.fill();
+          }
+        }
+
+        // EBR-7D Numerals (2, 4, 6, 8, 10 — Vortex removed '1' on EBR-7D for clean center view)
+        const fontPx = Math.max(10, Math.round(0.25 * scale));
+        c.font = `700 ${fontPx}px "Rajdhani", "Inter", sans-serif`;
+        c.textAlign = 'center';
+        c.textBaseline = 'middle';
+
+        [2, 4, 6, 8, 10].forEach(eNum => {
+          const y = oy + eNum * scale;
+          const maxW = getEbr7dTreeMaxWidth(eNum);
+          const labelDx = (maxW + 0.38) * scale;
+          c.fillText(String(eNum), ox - labelDx, y);
+          c.fillText(String(eNum), ox + labelDx, y);
+        });
+
+        [8].forEach(num => {
+          const dx = num * scale;
+          const labelY = oy - h10 - fontPx * 0.62;
+          c.fillText(String(num), ox - dx, labelY);
+          c.fillText(String(num), ox + dx, labelY);
+        });
+        c.restore();
+
+        // 3. Center Cross-Plex (-6 to +6 MRAD Horizontal & Vertical Stadia — Illuminates Red when ILLUM is ON)
+        c.save();
+        if (isIllum) {
+          c.shadowColor = 'rgba(239, 68, 68, 0.92)';
+          c.shadowBlur = Math.max(6, scale * 0.12);
+        } else {
+          c.shadowColor = 'rgba(0, 0, 0, 0.42)';
+          c.shadowBlur = Math.max(1.5, scale * 0.025);
+          c.shadowOffsetX = 0.6;
+          c.shadowOffsetY = 0.8;
+        }
+
+        c.strokeStyle = bevelHighlight;
+        c.lineWidth = Math.max(1.8, scale * 0.030);
+        c.beginPath();
+        c.moveTo(ox - 6.0 * scale, oy - 0.5);
+        c.lineTo(ox - gapPx, oy - 0.5);
+        c.moveTo(ox + gapPx, oy - 0.5);
+        c.lineTo(ox + 6.0 * scale, oy - 0.5);
+        c.moveTo(ox - 0.5, oy - 4.5 * scale);
+        c.lineTo(ox - 0.5, oy - gapPx);
+        c.moveTo(ox - 0.5, oy + gapPx);
+        c.lineTo(ox - 0.5, oy + postStartY);
+        c.stroke();
+
+        c.strokeStyle = mainColor;
+        c.fillStyle = mainColor;
+        c.lineWidth = Math.max(1.12, scale * 0.022);
+
+        // Main Cross-Plex Axes
+        c.beginPath();
+        c.moveTo(ox - 6.0 * scale, oy);
+        c.lineTo(ox - gapPx, oy);
+        c.moveTo(ox + gapPx, oy);
+        c.lineTo(ox + 6.0 * scale, oy);
+
+        c.moveTo(ox, oy - 4.5 * scale);
+        c.lineTo(ox, oy - gapPx);
+        c.moveTo(ox, oy + gapPx);
+        c.lineTo(ox, oy + postStartY);
+        c.stroke();
+
+        // Center Floating Pinpoint Dot (0.03 MRAD diameter -> 0.015 MRAD radius)
+        const centerDotR = Math.max(1.4, 0.019 * scale);
+        c.beginPath();
+        c.arc(ox, oy, centerDotR, 0, Math.PI * 2);
+        c.fill();
+
+        // Horizontal Stadia Subtensions (-6.0 to +6.0 MRAD):
+        //   • Top: 0.2 MRAD hashes (.2, .4, .6, .8) extending UPWARD
+        //   • Bottom: 0.5 MRAD hashes (0.5, 1.5, 2.5, 3.5, 4.5, 5.5) extending DOWNWARD
+        //   • Whole MRADs (1..6): extending both UP and DOWN
+        c.lineWidth = Math.max(1.02, scale * 0.019);
+        c.beginPath();
+        for (let mil = 0; mil < 6; mil++) {
+          const wholeM = mil + 1;
+          const dxWhole = wholeM * scale;
+          c.moveTo(ox - dxWhole, oy - h10);
+          c.lineTo(ox - dxWhole, oy + h10);
+          c.moveTo(ox + dxWhole, oy - h10);
+          c.lineTo(ox + dxWhole, oy + h10);
+
+          // Top 0.2 MRAD hashes (.2, .4, .6, .8)
+          for (let sub = 1; sub <= 4; sub++) {
+            const m = mil + sub * 0.2;
+            const dx = m * scale;
+            c.moveTo(ox - dx, oy - h02);
+            c.lineTo(ox - dx, oy);
+            c.moveTo(ox + dx, oy - h02);
+            c.lineTo(ox + dx, oy);
+          }
+
+          // Bottom 0.5 MRAD hash (.5)
+          const halfM = mil + 0.5;
+          const dxHalf = halfM * scale;
+          c.moveTo(ox - dxHalf, oy);
+          c.lineTo(ox - dxHalf, oy + h05);
+          c.moveTo(ox + dxHalf, oy);
+          c.lineTo(ox + dxHalf, oy + h05);
+        }
+
+        // Upper Vertical Stadia Subtensions (0.2 to 4.5 MRAD UP — every 0.2 MRAD)
+        for (let step = 1; step <= 22; step++) {
+          const m = Number((step * 0.2).toFixed(1));
+          const dy = m * scale;
+          const isWhole = (step % 5 === 0);
+          const hLen = isWhole ? h10 : h02;
+          c.moveTo(ox - hLen, oy - dy);
+          c.lineTo(ox + hLen, oy - dy);
+        }
+
+        // Lower Vertical Stadia Subtensions (0.2 to 10.0 MRAD DOWN — strictly every 0.2 MRAD per EBR-7D spec)
+        for (let step = 1; step <= 50; step++) {
+          const m = Number((step * 0.2).toFixed(1));
+          const dy = m * scale;
+          const isWhole = (step % 5 === 0);
+          const hLen = isWhole ? h10 : h02;
+          c.moveTo(ox - hLen, oy + dy);
+          c.lineTo(ox + hLen, oy + dy);
+        }
+        c.stroke();
+
+        // Horizontal & Upper Vertical Even Numerals (2, 4, 6 — no '1')
+        c.font = `700 ${fontPx}px "Rajdhani", "Inter", sans-serif`;
+        c.textAlign = 'center';
+        c.textBaseline = 'middle';
+        [2, 4, 6].forEach(num => {
+          const dx = num * scale;
+          const labelY = oy - h10 - fontPx * 0.62;
+          c.fillText(String(num), ox - dx, labelY);
+          c.fillText(String(num), ox + dx, labelY);
+        });
+        [2, 4].forEach(num => {
+          const dy = num * scale;
+          c.fillText(String(num), ox - h10 - fontPx * 0.58, oy - dy);
+        });
 
         c.restore();
       }
@@ -2088,13 +2572,21 @@ function doPost(e) {
         c.arc(cx, cy, r + tubeWidth * 0.5, 0, Math.PI * 2);
         c.stroke();
 
-        // Main 3D Anodized Aluminum Ocular Bezel
+        // Main 3D Anodized Aluminum Ocular Bezel (Vortex Stealth Shadow Bronze vs Element Matte Black)
         const ringGrad = c.createLinearGradient(cx - r, cy - r, cx + r, cy + r);
-        ringGrad.addColorStop(0.0, '#2c323c');
-        ringGrad.addColorStop(0.25, '#15191f');
-        ringGrad.addColorStop(0.55, '#0b0d11');
-        ringGrad.addColorStop(0.85, '#1c2129');
-        ringGrad.addColorStop(1.0, '#2a303a');
+        if (appState.reticleType === 'EBR-7D') {
+          ringGrad.addColorStop(0.0, '#3d332a');
+          ringGrad.addColorStop(0.25, '#241e18');
+          ringGrad.addColorStop(0.55, '#14110d');
+          ringGrad.addColorStop(0.85, '#2b241d');
+          ringGrad.addColorStop(1.0, '#3a3027');
+        } else {
+          ringGrad.addColorStop(0.0, '#2c323c');
+          ringGrad.addColorStop(0.25, '#15191f');
+          ringGrad.addColorStop(0.55, '#0b0d11');
+          ringGrad.addColorStop(0.85, '#1c2129');
+          ringGrad.addColorStop(1.0, '#2a303a');
+        }
 
         c.strokeStyle = ringGrad;
         c.lineWidth = tubeWidth;
@@ -2406,8 +2898,10 @@ function doPost(e) {
 
       function nudgeTarget(dxMrad, dyMrad) {
         playClick(720);
-        appState.targetMradX = Math.max(-6.5, Math.min(6.5, Number((appState.targetMradX + dxMrad).toFixed(2))));
-        appState.targetMradY = Math.max(-5.5, Math.min(10.0, Number((appState.targetMradY + dyMrad).toFixed(2))));
+        const hSign = appState.flipHorizontal ? -1 : 1;
+        const vSign = appState.flipVertical ? -1 : 1;
+        appState.targetMradX = Math.max(-6.5, Math.min(6.5, Number((appState.targetMradX + dxMrad * hSign).toFixed(2))));
+        appState.targetMradY = Math.max(-5.5, Math.min(10.0, Number((appState.targetMradY + dyMrad * vSign).toFixed(2))));
       }
 
       document.getElementById('btnNudgeLeft').addEventListener('click', () => nudgeTarget(-0.1, 0));
@@ -2459,9 +2953,11 @@ function doPost(e) {
         if (activePointers.size === 1) {
           const dxPx = curr.x - prev.x;
           const dyPx = curr.y - prev.y;
+          const hSign = appState.flipHorizontal ? -1 : 1;
+          const vSign = appState.flipVertical ? -1 : 1;
 
-          appState.targetMradX = Math.max(-6.5, Math.min(6.5, appState.targetMradX + (dxPx / metrics.pxPerMrad)));
-          appState.targetMradY = Math.max(-5.5, Math.min(10.0, appState.targetMradY + (dyPx / metrics.pxPerMrad)));
+          appState.targetMradX = Math.max(-6.5, Math.min(6.5, appState.targetMradX + ((dxPx * hSign) / metrics.pxPerMrad)));
+          appState.targetMradY = Math.max(-5.5, Math.min(10.0, appState.targetMradY + ((dyPx * vSign) / metrics.pxPerMrad)));
         } else if (activePointers.size === 2) {
           const pts = Array.from(activePointers.values());
           const dist = Math.hypot(pts[1].x - pts[0].x, pts[1].y - pts[0].y);
@@ -2508,6 +3004,18 @@ function doPost(e) {
         if (e.code === 'Space') {
           e.preventDefault();
           fireShot();
+        } else if (e.code === 'ArrowLeft') {
+          e.preventDefault();
+          nudgeTarget(-0.1, 0);
+        } else if (e.code === 'ArrowRight') {
+          e.preventDefault();
+          nudgeTarget(0.1, 0);
+        } else if (e.code === 'ArrowUp') {
+          e.preventDefault();
+          nudgeTarget(0, -0.1);
+        } else if (e.code === 'ArrowDown') {
+          e.preventDefault();
+          nudgeTarget(0, 0.1);
         }
       });
 
@@ -2559,7 +3067,35 @@ function doPost(e) {
       });
 
       selectReticleType.addEventListener('change', () => {
-        headerReticleBadge.textContent = `${selectReticleType.value} MRAD`;
+        playClick(660);
+        updateScopeAndFlipSettingsUI();
+        saveUserSettings();
+        invalidateReticleCache(true);
+      });
+
+      selectTolerance.addEventListener('change', () => {
+        playClick(640);
+        appState.toleranceMrad = parseFloat(selectTolerance.value);
+        saveUserSettings();
+      });
+
+      selectDefaultZoom.addEventListener('change', () => {
+        playClick(640);
+        saveUserSettings();
+      });
+
+      btnToggleFlipVertical.addEventListener('click', () => {
+        playClick(700);
+        appState.flipVertical = !appState.flipVertical;
+        updateScopeAndFlipSettingsUI();
+        saveUserSettings();
+      });
+
+      btnToggleFlipHorizontal.addEventListener('click', () => {
+        playClick(700);
+        appState.flipHorizontal = !appState.flipHorizontal;
+        updateScopeAndFlipSettingsUI();
+        saveUserSettings();
       });
 
       // Manual Sync Now Button
@@ -2676,8 +3212,9 @@ function doPost(e) {
         syncLeaderboardWithGoogleDrive(null, true);
       });
 
-      // Initialize App & Trigger Initial Google Drive Sync
+      // Initialize App, Restore User Settings & Trigger Initial Google Drive Sync
       window.addEventListener('load', () => {
+        loadUserSettings();
         renderStartScreen();
         syncLeaderboardWithGoogleDrive();
       });
